@@ -1,0 +1,7 @@
+tracker_type: bytetrack
+track_high_thresh: 0.25   # آستانه‌ی شروع track (پیش‌فرض 0.5)
+track_low_thresh: 0.1     # نگه‌داشتن detectionهای ضعیف
+new_track_thresh: 0.25    # ساخت track جدید فقط با اطمینان کافی
+track_buffer: 60          # چند فریم track را بعد از گم‌شدن نگه دار (پیش‌فرض 30)
+match_thresh: 0.85        # تطبیق راحت‌تر بین فریم‌ها (پیش‌فرض 0.8)
+fuse_score: True
