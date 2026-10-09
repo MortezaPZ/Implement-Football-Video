@@ -1,0 +1,6 @@
+# Python 3.11. CPU PyTorch is installed by ultralytics. CUDA is not required.
+numpy>=1.26,<3
+opencv-python>=4.10,<5
+scikit-learn>=1.5,<2
+tqdm>=4.66
+ultralytics>=8.3,<9
