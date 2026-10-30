@@ -9,7 +9,7 @@ STUBS_DIR = ROOT_DIR / "stubs"
 STUB_PATH = STUBS_DIR / "tracks.pkl"
 
 # --- Model ---
-MODEL_PATH = ROOT_DIR / "models" / "football.pt"   # مدل عمومی COCO که واقعاً موجوده
+MODEL_PATH = ROOT_DIR / "models" / "football.pt"
 DEVICE = "cpu"                          # "cuda" اگه GPU داری
 CONFIDENCE = 0.30
 TRACKER_CONFIG = str(ROOT_DIR / "bytetrack_custom.yaml")

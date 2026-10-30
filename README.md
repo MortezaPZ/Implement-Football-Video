@@ -43,7 +43,7 @@ pip install ultralytics opencv-python numpy scikit-learn tqdm
 
 ### Models
 
-Place the required YOLO weights in a `models/` folder:
+The default configuration uses the model checkpoints in `models/`:
 
 ```
 models/
@@ -51,13 +51,17 @@ models/
 └── pitch_keypoints.pt    # Pitch landmark (keypoint) detection model
 ```
 
+If you replace either model with a checkpoint using a different name, update its path in `config.py`.
+
 ### Input Video
 
-Place your match footage at:
+The repository includes a sample match video at:
 
 ```
 data/input/input_video.mp4
 ```
+
+Replace it with footage you have permission to use, or change `config.py` to point to another input file.
 
 ### Run
 
@@ -77,7 +81,7 @@ python main.py
 
 ## 📤 Outputs
 
-All outputs are written to `data/output/`:
+All outputs are generated in data/output/ when the pipeline runs. The video artifacts are not committed, which keeps the source repository lightweight.
 
 | File | Description |
 |------|-------------|
