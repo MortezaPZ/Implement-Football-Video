@@ -30,7 +30,7 @@ A computer-vision pipeline that analyzes football match footage end-to-end: dete
 │   └── renderer.py                  # Drawing helpers for all checkpoint/output videos
 ├── utils/
 │   └── video_utils.py               # Stage 1 - Video read/write helpers
-└── stubs/                            # Cached tracking & pitch keypoint results (.pkl)
+└── stubs/                            # Local generated cache (not tracked)
 ```
 
 ## 🚀 Getting Started
@@ -92,12 +92,7 @@ All outputs are generated in data/output/ when the pipeline runs. The video arti
 
 ## ⚡ Caching with Stubs
 
-To avoid re-running detection/tracking on every execution, results are cached as pickle files in `stubs/`:
-
-- `stubs/tracks.pkl` — cached tracking results
-- `stubs/pitch_keypoints.pkl` — cached pitch keypoint detections
-
-Set `read_from_stub=True` (default in `main.py`) to reuse cached results, or delete the stub files to force recomputation.
+The first run computes tracking and pitch keypoints from the input video. The pipeline may cache those results in `stubs/` for later runs. Cache files are ignored by Git and are regenerated automatically when missing.
 
 ## ⚙️ Configuration
 
