@@ -41,30 +41,22 @@ A computer-vision pipeline that analyzes football match footage end-to-end: dete
 pip install ultralytics opencv-python numpy scikit-learn tqdm
 ```
 
-### Models
+### Model Checkpoints and License
 
-The default configuration uses the model checkpoints in `models/`:
+The default configuration expects `football.pt` and `pitch_keypoints.pt` in `models/`. These checkpoints were trained with Ultralytics YOLO. Ultralytics states that YOLO code and trained models are covered by AGPL-3.0 by default; an Enterprise license is the alternative for projects that cannot use AGPL-3.0. This repository is therefore released under AGPL-3.0 (see [`LICENSE`](LICENSE)).
 
-```
-models/
-├── football.pt           # Player/referee/ball detection model
-└── pitch_keypoints.pt    # Pitch landmark (keypoint) detection model
-```
+The checkpoint metadata points to these Roboflow training datasets, both listed under CC BY 4.0:
 
-If you replace either model with a checkpoint using a different name, update its path in `config.py`.
+- [football-players-detection, version 12](https://universe.roboflow.com/roboflow-jvuqo/football-players-detection-3zvbc/dataset/12)
+- [football-field-detection, version 14](https://universe.roboflow.com/roboflow-jvuqo/football-field-detection-f07vi/dataset/14)
+
+If you replace either checkpoint, update its path in `config.py` and retain the model's license and dataset attribution.
 
 ### Input Video
 
-The repository includes a sample match video at:
-
-```
-data/input/input_video.mp4
-```
-
-Replace it with footage you have permission to use, or change `config.py` to point to another input file.
+No match footage is included. Use footage you have permission to process and place it at `data/input/input_video.mp4`, or change the path in `config.py`. Input videos are ignored by Git.
 
 ### Run
-
 ```bash
 python main.py
 ```
