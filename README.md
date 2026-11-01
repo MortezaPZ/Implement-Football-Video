@@ -106,3 +106,12 @@ All key settings live in `config.py`, including:
 Morteza Pazhoum — @MortezaPZ
 
 K.N. Toosi University of Technology — Computer Science
+
+## Folder guides
+
+- [`models/`](<models/README.md>)
+- [`team_assignment/`](<team_assignment/README.md>)
+- [`tracking/`](<tracking/README.md>)
+- [`transformation/`](<transformation/README.md>)
+- [`utils/`](<utils/README.md>)
+- [`visualization/`](<visualization/README.md>)
